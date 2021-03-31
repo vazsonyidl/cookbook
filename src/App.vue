@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <Header/>
+    <app-header/>
+    <main-content/>
   </div>
 </template>
 
 <script>
-import Header from '@/components/header/Header.vue';
+import AppHeader from '@/components/header/Header';
+import MainContent from '@/components/main-content/MainContent';
 
 export default {
   name: 'App',
   components: {
-    Header
+    AppHeader,
+    MainContent
   }
-}
+};
 </script>
 
 <style>
@@ -24,6 +27,6 @@ export default {
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 </style>
