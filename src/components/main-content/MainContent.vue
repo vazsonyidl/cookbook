@@ -1,13 +1,11 @@
 <template>
   <div>
-    <recipe-card :name="myName"/>
+    <recipe-card :info="recipeInfo"/>
   </div>
 </template>
 
 <script>
 import RecipeCard from '@/components/main-content/recipe-card/RecipeCard';
-
-const myName = 'aabbcc';
 
 export default {
   name: 'main-content',
@@ -16,7 +14,10 @@ export default {
   },
   data() {
     return {
-      myName
+      recipeInfo: {
+        name: 'Burger',
+        description: 'A fancy burger with cheese'
+      }
     }
   }
 }
