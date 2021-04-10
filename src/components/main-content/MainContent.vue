@@ -42,6 +42,5 @@ export default {
 section {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 </style>

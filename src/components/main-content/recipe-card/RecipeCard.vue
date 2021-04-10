@@ -36,10 +36,12 @@ export default {
 <style scoped>
 
 .container {
+  flex: 1 300px;
+  height: 40vh;
+  min-height: 300px;
   margin: 8px;
   border-radius: 16px;
   box-shadow: 1px 3px #dad8d8;
-  height: 350px;
 }
 
 .card {
