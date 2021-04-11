@@ -6,6 +6,9 @@
 </template>
 
 <script>
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
+
 import AppHeader from '@/components/header/Header';
 import MainContent from '@/components/main-content/MainContent';
 

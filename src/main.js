@@ -1,8 +1,11 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import axios from 'axios';
 
-Vue.config.productionTip = false
+import App from './App.vue';
+import {axiosGetInterceptor as getIntrcpt} from '@/interceptors/axios-get.interceptor';
+
+axios.interceptors.request.use(getIntrcpt.onFulfilled, getIntrcpt.onRejected, {runWhen: getIntrcpt.runWhen});
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  render: h => h(App)
+}).$mount('#app');
