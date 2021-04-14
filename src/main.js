@@ -6,6 +6,8 @@ import {axiosGetInterceptor as getIntrcpt} from '@/interceptors/axios-get.interc
 
 axios.interceptors.request.use(getIntrcpt.onFulfilled, getIntrcpt.onRejected, {runWhen: getIntrcpt.runWhen});
 
+Vue.config.productionTip = false;
+
 new Vue({
   render: h => h(App)
 }).$mount('#app');
