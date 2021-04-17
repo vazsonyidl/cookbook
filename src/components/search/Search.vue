@@ -29,6 +29,20 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
+@import "@/styles/colors/colors.scss";
+
+.form-container {
+  margin: 12px;
+
+  .search-button {
+    border: none;
+    border-radius: 16px;
+    padding: 8px;
+    margin: 4px 0;
+    background-color: $primary-grey;
+    color: $primary-white;
+  }
+}
 </style>
