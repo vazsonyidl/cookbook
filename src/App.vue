@@ -2,7 +2,7 @@
   <div id="app">
     <app-header/>
     <search/>
-    <main-content/>
+    <recipe/>
   </div>
 </template>
 
@@ -10,15 +10,15 @@
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
 
-import AppHeader from '@/components/header/Header';
-import Search from '@/components/search/Search';
-import MainContent from '@/components/main-content/MainContent';
+import AppHeader from '@/components/header/Header/';
+import Search from '@/components/search/Search/';
+import Recipe from '@/components/recipe/Recipe/';
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    MainContent,
+    Recipe,
     Search
   }
 };
