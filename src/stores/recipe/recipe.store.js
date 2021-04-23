@@ -5,26 +5,22 @@ const apiUrl = 'https://api.edamam.com/search';
 export const recipeStore = {
   state: () => ({
     searchExpression: null,
-    recipeResults: {a: 'b'}
+    recipeResults: []
   }),
   mutations: {
-    changeSearchExpression(state, newExpression) {
+    setSearchExpression: (state, newExpression) => {
       state.searchExpression = newExpression;
-    }
-  },
-  getters: {
-    getRecipes(state) {
-      return state.recipeResults;
+    },
+    setRecipes: (state, recipes) => {
+      state.recipeResults = recipes;
     }
   },
   actions: {
-    async fetchRecipes(context, payload) {
+    fetchRecipes: async (context, payload) => {
       const params = {
         q: payload
       };
-      axios.get(apiUrl, {params}).then(response => {
-        console.log(response);
-      });
+      axios.get(apiUrl, {params}).then(response => context.commit('setRecipes', response.data.hits));
     }
   }
 };

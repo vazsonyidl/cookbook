@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import {mapActions, mapGetters} from 'vuex';
+import {mapActions, mapMutations} from 'vuex';
 import {MdCard, MdField} from 'vue-material/dist/components';
 import {usePlugins} from '@/helpers/vue-use.helper';
 
@@ -21,14 +21,12 @@ export default {
   data: () => ({
     searchExpression: ''
   }),
-  computed: {
-    ...mapGetters('recipe', ['getRecipes']),
-  },
   methods: {
     ...mapActions('recipe', ['fetchRecipes']),
+    ...mapMutations('recipe', ['setSearchExpression']),
     search: function() {
       this.fetchRecipes(this.searchExpression);
-      this.$store.commit('recipe/changeSearchExpression', this.searchExpression);
+      this.setSearchExpression(this.searchExpression);
     }
   }
 };
