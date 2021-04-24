@@ -7,8 +7,8 @@
 
 <script>
 import {MdCard} from 'vue-material/dist/components';
-import {usePlugins} from '@/helpers/vue-use.helper';
-import RecipeInfo from './RecipeInfo';
+import {usePlugins} from '@/helpers/vue-use.helper/';
+import RecipeInfo from '../+recipe-info/RecipeInfo';
 
 usePlugins([MdCard]);
 
