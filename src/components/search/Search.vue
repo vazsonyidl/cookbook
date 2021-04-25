@@ -1,11 +1,11 @@
 <!--suppress CssUnknownTarget -->
 <template>
-  <form class="form-container">
+  <form class="form-container" @submit.prevent="search">
     <md-field>
       <label>Search expression(s)</label>
       <img src="../../assets/search_black_24dp.svg" alt="search-icon"/>
       <md-input v-model="searchExpression" placeholder="Type in what you are looking for"></md-input>
-      <button type="button" class="search-button" @click="search()">Search</button>
+      <button type="submit" class="search-button" @click="search()">Search</button>
     </md-field>
   </form>
 </template>
