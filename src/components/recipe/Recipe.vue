@@ -22,5 +22,6 @@ export default {
 section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 </style>

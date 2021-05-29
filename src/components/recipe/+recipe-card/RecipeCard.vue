@@ -28,7 +28,7 @@ export default {
 <style scoped>
 
 .container {
-  flex: 1 300px;
+  flex: 0 1 350px;
   height: 38vh;
   min-height: 300px;
   margin: 8px;
